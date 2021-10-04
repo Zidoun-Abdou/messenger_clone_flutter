@@ -61,7 +61,7 @@ class MyHomePage extends StatelessWidget {
             child: ClipOval(
               child: Image.asset(
                 "assets/profile-pics/${profilePics[1]}",
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
             ),
           ),
@@ -95,7 +95,7 @@ class MyHomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Padding(
             padding: EdgeInsets.all(16),
@@ -154,7 +154,8 @@ class MyHomePage extends StatelessWidget {
                                       color: Color.fromRGBO(195, 195, 195, 1),
                                     ))
                                   : Image.asset(
-                                      "assets/profile-pics/${profilePics[index]}"),
+                                      "assets/profile-pics/${profilePics[index]}",
+                                      fit: BoxFit.fill),
                             ),
                           ),
                           Positioned(
@@ -209,7 +210,8 @@ class MyHomePage extends StatelessWidget {
                         ),
                         child: ClipOval(
                           child: Image.asset(
-                              "assets/profile-pics/${profilePics[index]}"),
+                              "assets/profile-pics/${profilePics[index]}",
+                              fit: BoxFit.fill),
                         ),
                       ),
                       Positioned(
